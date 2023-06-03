@@ -1,0 +1,39 @@
+esphome:
+  name: espilight
+  includes:
+    - components/espilightsw/espilightsw.h  
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+switch:
+  # - includes components/espilightsw/espilightsw.h  
+  - platform: espilightsw
+    # name: myespilight
+    protocol: "quigg_gt1000"
+    data: "{\"id\":131271,\"unit\":1,\"state\":\"on\"}"
+    pin: 19
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  password: ""
+
+wifi:
+  ssid: "secret"
+  password: "secretsecretsecret"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Espilight Fallback Hotspot"
+    password: "ZK4AVQVxBJ97"
+
+captive_portal:
+    
