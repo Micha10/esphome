@@ -29,6 +29,7 @@ async def to_code(config):
     cg.add(var.set_pin(pin))
     cg.add(var.set_protocol_name(config[CONF_PROTOCOL_NAME]))
     cg.add(var.set_protocol_data(config[CONF_PROTOCOL_DATA]))
+    cg.add_library("https://github.com/Micha10/ESPiLight.git", None)
 
     # paren = await cg.get_variable(config[CONF_ID])
     # var = cg.new_Pvariable(config[CONF_ID], paren)
