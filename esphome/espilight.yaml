@@ -8,10 +8,11 @@ esp32:
   framework:
     type: arduino
 
-# switch:
+switch:
 #   # - includes components/espilightsw/espilightsw.h  
-#   - platform: espilightsw
-#     # name: myespilight
+  - platform: gpio
+    name: myespilight
+    pin: 0
 #     protocol: "quigg_gt1000"
 #     data: "{\"id\":131271,\"unit\":1,\"state\":\"on\"}"
 #     pin: 19 

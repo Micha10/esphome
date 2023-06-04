@@ -4,7 +4,7 @@
 
 #include "esphome/core/component.h"
 #include "esphome/components/switch/switch.h"
-
+#include "ESPiLight.h"
 
 namespace esphome {
 namespace espilightsw {
@@ -23,7 +23,7 @@ class EspilightComponent : public switch_::Switch, public Component {
   void setup() override;
   void dump_config() override;
   float get_setup_priority() const override;
-  void loop() override;
+  //void loop() override;
   switch_::Switch *source_{nullptr};
 
   ESPiLight *pespilight{nullptr};

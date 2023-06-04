@@ -44,7 +44,7 @@ void EspilightComponent::do_it(void) {
     pespilight->send(this->protocol_name_, this->protocol_data_);    
 }
 
-// float EspilightComponent::get_setup_priority() const { return setup_priority::DATA; }
+float EspilightComponent::get_setup_priority() const { return setup_priority::DATA; }
 
 // void EspilightComponent::loop() {
 //   if (!this->next_update_) {
